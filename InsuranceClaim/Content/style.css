@@ -3,6 +3,94 @@ body {
     padding: 0;
     font-family: 'Open Sans', sans-serif;
 }
+/*LOGIN BUTTON CODE style */
+.bubbly-button {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #ADFF2F ;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+}
+.bubbly-button:focus {
+  outline: 0;
+}
+.bubbly-button:before, .bubbly-button:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 200%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button:active {
+  transform: scale(0.9);
+  background-color: #ADFF2F ;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.bubbly-button.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+  }
+}
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+  }
+}
+/*END OF CODE*/
+
+
+
+
 
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
@@ -145,7 +233,7 @@ th.action-th {
     width: 160px;
     left: auto;
     min-width: inherit; padding: 0;     top:100%;
-} 
+}
 .dropdown-top .dropdown-menu .list-inline li {
       display: inline-block;
     width: 100%;     padding: 0;
@@ -226,7 +314,7 @@ th.action-th {
 }
 .skype-details ul li span:last-child{margin:0}
 .login-btn {
-    margin:0px 0 0; 
+    margin:0px 0 0;
 }
 .skype-details ul li a {
     font-size: 15px;
@@ -258,7 +346,7 @@ th.action-th {
 
     .login-btn ul li a {
         text-transform: uppercase;
-         color:#fff;  
+         color:#fff;
         text-decoration: none;  font-size:14px;
     }
     .login-btn ul li {
@@ -541,7 +629,7 @@ th.action-th {
     border: none;
     box-shadow: inherit !important;
 }
-.form-group-text input[type="checkbox"] {height:auto;  
+.form-group-text input[type="checkbox"] {height:auto;
 }
 
 .form-group-textarea textarea {
@@ -832,7 +920,7 @@ span.online-dot {
     /*height: 400px;*/
     padding: 0;
     position: relative;
-    background: #31506a; padding:60px 0; 
+    background: #31506a; padding:60px 0;
 }
 
 /*.banner-content {
@@ -1415,7 +1503,7 @@ table.policy-table-grid {
 
 .btn-rounded-list { display:inline-block; width:100%; margin:25px 0 0
 }
-.btn-rounded-list ul li a{ display:inline-block; padding:10px 25px; color:#fff; border:2px solid #fff; border-radius:30px; text-decoration:none; text-transform:uppercase; font-size:16px;}  
+.btn-rounded-list ul li a{ display:inline-block; padding:10px 25px; color:#fff; border:2px solid #fff; border-radius:30px; text-decoration:none; text-transform:uppercase; font-size:16px;}
 .btn-rounded-list ul li.dark-btn a{border-color:#79378b; background:#79378b;}
 
 .policy-option-section {
@@ -1698,7 +1786,7 @@ div#invoiceNumberDiv .form-group {
  }
         .container-riskdetail:last-child .riskdetail-box {
     margin: 0;
-    border: none; padding:0; 
+    border: none; padding:0;
 }
         .form-section-top-riskdetail .form-title {
     border: none;
@@ -1795,7 +1883,7 @@ div#invoiceNumberDiv .form-group {
 }
 .claim-label span label input[type="radio"] {
     float: left;
-    margin: 3px 4px 0 0; 
+    margin: 3px 4px 0 0;
 }
 
 .claim-status select {
@@ -1833,7 +1921,7 @@ div#invoiceNumberDiv .form-group {
     margin: 4px 3px 0 0;    float: left;
 	}
 	/**15 june css end**/
-	
+
 .city-section-top {
 display: inline-block;
 width: 100%;
